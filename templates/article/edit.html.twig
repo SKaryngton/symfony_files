@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Article{% endblock %}
+
+{% block body %}
+    <h1>Edit Article</h1>
+   <div class="d-flex flex-column p-5">
+       {{ include('article/_form.html.twig', {'button_label': 'Update'}) }}
+  <div class="d-flex mt-5">
+      <a class="btn btn-primary" href="{{ path('app_article_index') }}">back to list</a>
+
+      {{ include('article/_delete_form.html.twig') }}
+  </div>
+
+   </div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+<div class="mb-3">
+    {{ form_label(form.title, 'Title', {'label_attr': {'class': 'form-label','for':'title'}}) }}
+    {{ form_widget(form.title, {'attr': {'class': 'form-control','id':'title','rows':'5'}}) }}
+</div>
+<div class="mb-3">
+    {{ form_label(form.imageFile, 'Image', {'label_attr': {'class': 'form-label','for':'image'}}) }}
+    {{ form_widget(form.imageFile, {'attr': {'class': 'form-control','id':'image'}}) }}
+</div>
+    <button class="btn btn-warning" formnovalidate>{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
